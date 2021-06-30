@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<TRMM_RT>
+    <DATA>
+        <LINK>https://disc2.gesdisc.eosdis.nasa.gov/data/TRMM_RT</LINK>
+        <TYPES>TRMM_3B42RT_Daily.7</TYPES>
+        <START_YEAR>2000</START_YEAR>
+        <END_YEAR>2019</END_YEAR>
+    </DATA>
+    <DATA>
+        <TYPES>TRMM_3B40RT.007</TYPES>
+        <START_YEAR>2000</START_YEAR>
+        <END_YEAR>2019</END_YEAR>
+    </DATA>
+    <DATA>
+        <TYPES>TRMM_3B40RT.7</TYPES>
+        <START_YEAR>2000</START_YEAR>
+        <END_YEAR>2019</END_YEAR>
+    </DATA>
+    <DATA>
+        <TYPES>	TRMM_3B41RT.007</TYPES>
+        <START_YEAR>2000</START_YEAR>
+        <END_YEAR>2019</END_YEAR>
+    </DATA>
+    <DATA>
+        <TYPES>TRMM_3B41RT.7</TYPES>
+        <START_YEAR>2000</START_YEAR>
+        <END_YEAR>2019</END_YEAR>
+    </DATA>
+    <DATA>
+        <TYPES>TRMM_3B42RT.007</TYPES>
+        <START_YEAR>2000</START_YEAR>
+        <END_YEAR>2019</END_YEAR>
+    </DATA>
+    <DATA>
+        <TYPES>TRMM_3B42RT.7</TYPES>
+        <START_YEAR>2000</START_YEAR>
+        <END_YEAR>2019</END_YEAR>
+    </DATA>
+    <DATA>
+        <TYPES>TRMM_3B42RT_Daily.7</TYPES>
+        <START_YEAR>2000</START_YEAR>
+        <END_YEAR>2019</END_YEAR>
+    </DATA>
+    <DATA>
+        <TYPES>TRMM_3B42RT_daily.007</TYPES>
+        <START_YEAR>2000</START_YEAR>
+        <END_YEAR>2019</END_YEAR>
+    </DATA>
+</TRMM_RT>
+
