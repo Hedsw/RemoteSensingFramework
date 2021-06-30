@@ -92,6 +92,7 @@ class nasafiledownloader(classifier):
                     response = requests.post("http://0.0.0.0:5002/converter/tifftonc4", data=DownloadResult)
                     print(response.text)
                 else:
+                    print("PASS")
                     pass
             elif request.method == 'GET':
                 pass
