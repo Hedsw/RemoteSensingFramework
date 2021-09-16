@@ -4,7 +4,7 @@ import os
 from sentinelsat import SentinelAPI, read_geojson, geojson_to_wkt
 from datetime import date
 from glob import glob
-from downloadmethod.sentinelAPI import sentinel_API as sentinel_API
+from downloadmethod.sentinelAPI import sentinelAPI
 from filechecker.zipreleaser import unzipper
 
 class sentinel2:

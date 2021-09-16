@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">  
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
+  <title>RemoteSensing Framework</title>
+  
+<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+</head>
+
+<body> <!-- Add your content of header -->
+  <header>
+    <nav class="w3-sidebar w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:250px;font-weight:bold;" id="mySidebar"><br>
+      <div class="w3-container">
+        <h3 class="w3-padding-64"><b><br>Category</b></h3>
+      </div>
+      <div class="w3-bar-block">
+        <a href="" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">TRMM_DOWNLOADER</a> 
+        <!-- 여기다가 이제.. Modis, Merged_IR, Sentinel-1, Sentinel-2, Summarization를 기존의 index.html으로 있는 것을 각각 타입에 맞게 다 바꿔서 넣어야 함-->
+        <a href="" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Modis</a> 
+        <a href="" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Merged_IR</a>
+        <a href="" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Sentinel-1</a> 
+        <a href="" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Sentinel-2</a> 
+        <a href="" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Summarization</a>
+      </div>
+    </nav>
+    
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+    
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:340px;margin-right:40px">
+    
+      <!-- Header -->
+      <div class="w3-container" style="margin-top:80px" id="showcase">
+        <h2 class="w3-jumbo"><b>RemoteSensing Framework</b></h2>
+      </div>
+      <div class="section-container">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-md-8 col-md-offset-2">
+              <h1 class="text-center">MICROSERVICE</h1>
+              <p>TRMM Downloader</p>
+                <form action='/download/trmm_rt', method = 'POST'>
+                  <label for="trmm">Choose a type:</label>
+                  <select name="lists" id="lists">
+                    <option value="TRMM_3B42RT.7">TRMM_3B42RT.7</option>
+                    <option value="TRMM_3B42RT_Daily.7">TRMM_3B42RT_Daily.7</option>
+                    <option value="TRMM_3B42RT_daily.007">TRMM_3B42RT_daily.007</option>                  
+                  </select>
+                
+                  <label>
+                    Period FROM 
+                    <input type="date" name="periodfrom" min="2000-04-01" max="2021-04-20" required>
+                    <span class="validity"></span>
+                  </label>
+                  <label>
+                    Period To 
+                    <input type="date" name="periodto" min="2000-04-01" max="2021-04-20" required>
+                    <span class="validity"></span>
+                  </label>
+                  <button>Submit</button>
+                </form>
+                <br><br>
+
+                <!--
+                <p>Merged IR</p>
+                <form action='/schedular', method = 'POST'>
+                  <label for="trmm">Choose a type:</label>
+                  <select name="lists" id="lists">
+                    <option value="TRMM_3B42RT_Daily.7">TRMM_3B42RT_Daily.7</option>
+                    <option value="TRMM_3B40RT.007">TRMM_3B40RT.007</option>
+                    <option value="TRMM_3B40RT.7">TRMM_3B40RT.7</option>
+                    <option value="TRMM_3B41RT.007">TRMM_3B41RT.007</option>
+                    <option value="TRMM_3B41RT.7">TRMM_3B41RT.7</option>
+                    <option value="TRMM_3B42RT.7">TRMM_3B42RT.7</option>
+                    <option value="TRMM_3B42RT_Daily.7">TRMM_3B42RT_Daily.7</option>
+                    <option value="TRMM_3B42RT_daily.007">TRMM_3B42RT_daily.007</option>
+                  </select>
+                
+                  <label>
+                    Period FROM 
+                    <input type="date" name="periodfrom" min="2000-04-01" max="2021-04-20" required>
+                    <span class="validity"></span>
+                  </label>
+                  <label>
+                    Period To 
+                    <input type="date" name="periodto" min="2000-04-01" max="2021-04-20" required>
+                    <span class="validity"></span>
+                  </label>
+                  <button>Submit</button>
+                </form>
+                  -->
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </header>
+  
+  
+  <footer class="footer-container white-text-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h3>MicroService</h3>
+          <div class="row">
+            <div class="col-xs-12 col-sm-7">
+              <p><small>Website created with <small></p>
+            </div>
+          </div>      
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <style>
+    body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+    body {font-size:16px;}
+    .w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+    .w3-half img:hover{opacity:1}
+  </style>
+
+
+</html>
+

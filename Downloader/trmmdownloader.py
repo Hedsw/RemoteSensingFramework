@@ -6,6 +6,8 @@ import urllib.request as urllib2
 import re,requests,wget,os,threading
 from bs4 import BeautifulSoup
 from xml.etree.ElementTree import parse
+from db_downloadinfo import dbdownloadtable
+from db_convertinfo import dbconverttable
 
 # FILE LINK GET FROM XML
 class xmlcontroller:
@@ -48,6 +50,12 @@ class filecontroller:
         list_set.sort()
         for i in list_set:
             if xml not in i:
+                dbdownloadtable.dbinsertInfo(i, 'nc4')
+                tmp = str(i)
+                print(tmp)
+                replaced = tmp.replace('nc4', 'tiff')
+                print(replaced, ' <- Coverted ')
+                dbconverttable.dbinsertInfo(replaced, 'tiff')
                 filenames.append(i)
         return filenames
     
